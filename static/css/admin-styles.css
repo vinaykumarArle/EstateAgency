@@ -1,0 +1,46 @@
+  .header {
+    padding: 10px;
+    box-shadow: 5px 2px 5px grey;
+  }
+
+  .logo-text {
+    font-size: 42px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 26px;
+    font-weight: bolder;
+    color: #066CA5;
+  }
+
+  .nav {
+    margin-top: 5px;
+  }
+
+  .nav-link {
+    border-radius: 20px;
+    color: #133A5B;
+    margin-right: 10px;
+  }
+
+  .nav-link:hover {
+    background-color: #AECBE5;
+    color: white;
+  }
+
+  .prop-img {
+    border-radius: 150px;
+    object-fit: fill;
+  }
+  .hover-div {
+    text-align: center;
+    font-size: 32px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(0,0,0,0.5);
+    border-radius: 150px;
+    z-index: 90px;
+    color: white;
+  }
+  .fas {
+    transform: translate(0px,120px);
+  }
