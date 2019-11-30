@@ -1,0 +1,33 @@
+{% extends 'admin-base.html' %}
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Property Name :</th>
+            <th scope="col">Property Price :</th>
+            <th scope="col">Property Area :</th>
+            <th scope="col">Property Beds :</th>
+            <th scope="col">Property Bath :</th>
+            <th scope="col">Property Garage :</th>
+            <th scope="col">Operations :</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prop in props %}
+        <tr>
+            <td>{{prop.prop_name}}</td>
+            <td>{{prop.prop_price}}</td>
+            <td>{{prop.prop_area}}</td>
+            <td>{{prop.prop_beds}}</td>
+            <td>{{prop.prop_bath}}</td>
+            <td>{{prop.prop_garage}}</td>
+            <td><a href="editProperty/{{prop.id}}"><button type="button"
+                        class="btn btn-info mr-1 edit-btn">Edit</button></a><a href="deleteProperty/{{prop.id}}"><button
+                        type="button" class="btn btn-danger">Delete</button></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<!-- <img src='{{prop.prop_image.url}}' width="300" height="300"> -->
+
+{% endblock %}

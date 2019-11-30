@@ -1,0 +1,22 @@
+{% extends 'admin-base.html' %}
+{% block content %}
+<table class="table">
+            <h1>Query's</h1>
+    <tbody>
+            {% for conts in cont %}
+            <tr>
+                <td>{{conts.name}}</td>
+                <td>{{conts.email}}</td>
+                <td>{{conts.sub}}</td>
+                <td>{{conts.msg}}</td>
+                <td><a href="deleteQuery/{{conts.id}}"><button
+                    type="button" class="btn btn-danger">Delete</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td><br><br></td>
+            </tr>
+            {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

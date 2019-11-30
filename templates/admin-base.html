@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/admin-styles.css' %}">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <title>Admin Panel</title>
+  <style>
+    .fas {
+      padding-right: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row header">
+      <div class="col-3 logo">
+        <h1 class="logo-text">LOGO</h1>
+      </div>
+      <div class="col-9">
+        <ul class="nav d-flex justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-2">
+        <ul class="nav flex-column">
+          <li class="nav-item m-2">
+            <a class="nav-link" href="addProperty"><i class="fas fas-add"></i>Add Property</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link" href="viewProperty">View Property</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link" href="addAgent">Add Agent</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link" href="agentList">View Agents</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link" href="query">Query's</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-10">
+        {% for message in messages %}
+        <div class="alert alert-{{request.session.level}} alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+        {% block content %}
+
+        {% endblock %}
+      </div>
+    </div>
+</body>
+
+</html>

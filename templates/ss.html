@@ -1,0 +1,21 @@
+<div id="content" class="colM">
+
+    <h1>Add property</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label class="required" for="id_prop_name">Prop name:</label>
+        <input type="text" name="prop_name" class="vTextField" maxlength="255" required="" id="id_prop_name"><br><br><br>
+        <label class="required" for="id_prop_price">Prop price:</label>
+        <input type="number" name="prop_price" class="vBigIntegerField" min="-9223372036854775808"
+            max="9223372036854775807" required="" id="id_prop_price"><br><br><br>
+        <label class="required" for="id_prop_area">Prop area:</label>
+        <input type="text" name="prop_area" class="vTextField" maxlength="255" required="" id="id_prop_area"><br><br><br>
+        <label class="required" for="id_prop_beds">Prop beds:</label>
+        <input type="number" name="prop_beds" class="vIntegerField" required="" id="id_prop_beds"><br><br><br>
+        <label class="required" for="id_prop_bath">Prop bath:</label>
+        <input type="number" name="prop_bath" class="vIntegerField" required="" id="id_prop_bath"><br><br><br>
+        <label class="required" for="id_prop_garage">Prop garage:</label>
+        <input type="number" name="prop_garage" class="vIntegerField" required="" id="id_prop_garage"><br><br><br>
+        <label class="required" for="id_prop_image">Prop image:</label>
+        <input type="file" name="prop_image" accept="image/*" required="" id="id_prop_image"><br><br><br>
+    <input type="submit" value="Save" class="default" name="_save">
+</form>

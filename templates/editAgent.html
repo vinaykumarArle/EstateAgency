@@ -1,0 +1,28 @@
+{% extends 'admin-base.html'%}
+{% block content %}
+    <form enctype="multipart/form-data" action="updateAgent/{{agent.id}}" method="post">
+        {% csrf_token %} 
+        <div class="form-group">
+        <label class="required" for="id_agent_name">Agent name:</label>
+        <input type="text" value="{{agent.agent_name}}" name="agent_name" class="vTextField form-control" maxlength="255" required="" id="id_agent_name"><br><br>
+        <label class="required" for="id_agent_tagline">Agent tagline:</label>
+        <input type="text" value="{{agent.agent_tagline}}" name="agent_tagline" class="vTextField form-control" maxlength="255" required="" id="id_agent_tagline"><br><br>
+        <label class="required" for="id_agent_desc">Agent desc:</label>
+        <textarea name="agent_desc" cols="40" rows="10" class="vLargeTextField form-control" required=""
+            id="id_agent_desc">{{agent.agent_desc}}</textarea><br><br>
+        <label class="required" for="id_agent_phone">Agent phone:</label>
+        <input type="number" value="{{agent.agent_phone}}" name="agent_phone" class="vBigIntegerField form-control" min="-9223372036854775808"
+            max="9223372036854775807" required="" id="id_agent_phone"><br><br>
+        <label class="required" for="id_agent_mobile">Agent mobile:</label>
+        <input type="number" value="{{agent.agent_phone}}" name="agent_mobile" class="vBigIntegerField form-control" min="-9223372036854775808"
+            max="9223372036854775807" required="" id="id_agent_mobile"><br><br>
+        <label class="required" for="id_agent_email">Agent email:</label>
+        <input type="email" value="{{agent.agent_email}}" name="agent_email" class="vTextField form-control" maxlength="254" required="" id="id_agent_email"><br><br>
+        <label class="required" for="id_agent_skype">Agent skype:</label>
+        <input type="text" value="{{agent.agent_skype}}" name="agent_skype" class="vTextField form-control" maxlength="255" required="" id="id_agent_skype"><br><br>
+        <label class="required" for="id_agent_image">Agent image:</label>
+        <input type="file" name="agent_image" id="id_agent_image" value="{{agent.agent_image}}"><br><br>
+        <input type="submit" value="Update" class="default" name="save">
+        </div>
+    </form>
+{% endblock %}

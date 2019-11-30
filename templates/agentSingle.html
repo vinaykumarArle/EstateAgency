@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!--/ Intro Single star /-->
+  <section class="intro-single">
+      <div class="container">
+      </div>
+    </section>
+  <!--/ Intro Single End /-->
+
+  <!--/ Agent Single Star /-->
+  <section class="agent-single">
+    <div class="container">
+     
+      <div class="row">
+        <div class="col-md-6">
+                <div class="agent-avatar-box">
+                  <img src="{{agent.agent_image.url}}" width="400px" height="400px" alt="" class="agent-avatar img-fluid">
+                </div>
+              </div>
+              <div class="col-md-6 section-md-t3">
+                <div class="agent-info-box">
+                  <div class="agent-title">
+                    <div class="title-box-d">
+                      <h1 class="title-d">{{agent.agent_name}}
+                        <br> </h1>
+                    </div>
+                  </div>
+                  <div class="agent-content mb-3">
+                    <p class="content-d color-text-a">
+                        {{agent.agent_desc}}
+                    </p>
+                    <div class="info-agents color-a">
+                      <p>
+                        <strong>Phone: </strong>
+                        <span class="color-text-a"> {{agent.agent_phone}}</span>
+                      </p>
+                      <p>
+                        <strong>Mobile: </strong>
+                        <span class="color-text-a"> {{agent.agent_mobile}}</span>
+                      </p>
+                      <p>
+                        <strong>Email: </strong>
+                        <span class="color-text-a"> {{agent.agent_email}}</span>
+                      </p>
+                      <p>
+                        <strong>skype: </strong>
+                        <span class="color-text-a"> {{agent.agent_skype}}</span>
+                      </p>
+  
+                    </div>
+                  </div>
+                  <div class="socials-footer">
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a href="https://www.facebook.com/people/Nidhi-Agarwal/100024784245519" target="_blank" class="link-one">
+                          <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" target="_blank" class="link-one">
+                          <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" target="_blank" class="link-one">
+                          <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" target="_blank" class="link-one">
+                          <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" target="_blank" class="link-one">
+                          <i class="fa fa-dribbble" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <br><br>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
